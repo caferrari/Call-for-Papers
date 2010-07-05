@@ -1,8 +1,10 @@
 <?php 
 /* SVN FILE: $Id$ */
-/* App schema generated on: 2010-07-01 23:07:01 : 1278036841*/
+/* App schema generated on: 2010-07-02 01:07:30 : 1278044070*/
 class AppSchema extends CakeSchema {
 	var $name = 'App';
+
+	var $file = 'schema_2.php';
 
 	function before($event = array()) {
 		return true;
@@ -92,6 +94,8 @@ class AppSchema extends CakeSchema {
 		'phone' => array('type' => 'string', 'null' => true, 'default' => NULL, 'length' => 45),
 		'phone2' => array('type' => 'string', 'null' => true, 'default' => NULL, 'length' => 45),
 		'size_id' => array('type' => 'integer', 'null' => false, 'default' => NULL, 'key' => 'index'),
+		'firstName' => array('type' => 'string', 'null' => true, 'default' => NULL, 'length' => 100),
+		'lastName' => array('type' => 'string', 'null' => true, 'default' => NULL, 'length' => 100),
 		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1), 'fk_speakers_users' => array('column' => 'user_id', 'unique' => 0), 'fk_speakers_sizes1' => array('column' => 'size_id', 'unique' => 0)),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 	);
